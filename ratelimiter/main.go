@@ -109,3 +109,15 @@ func main() {
 // You can swap TokenBucketLimiter with another implementation (e.g., FixedWindowLimiter, SlidingWindowLimiter) without changing SimulateRequests.
 
 // so we can have multiple structs which implements the allow function then all of them can have same simulaterequests function right
+
+// Imagine you run a delivery company. You don’t care whether your worker comes on a bike, scooter, or car — as long as they can deliver the package when you ask: Deliver()
+
+// Just like USB — no matter the brand of mouse, as long as it follows USB protocol, it works.
+
+// Think of interfaces like sockets and structs like plugs.
+
+// The socket says:
+
+// “You must have two flat pins (a method named Allow() returning bool)”
+
+// Then any plug (any struct with Allow() method) that fits — works.
