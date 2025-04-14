@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package notification;
+
+option go_package = "github.com/lazypanda2004/notification-system/proto;notification";
+
+service NotificationService {
+  rpc SendNotification (NotificationRequest) returns (NotificationResponse);
+}
+
+message NotificationRequest {
+  string user_id = 1;
+  string type = 2;      // "email" or "sms"
+  string recipient = 3;
+  string message = 4;
+}
+
+message NotificationResponse {
+  bool success = 1;
+  string message = 2;
+}
